@@ -3,7 +3,7 @@ FROM apnar/nfs-ganesha
 #RUN mkdir -p /var/lib/nfs/ganesha
 RUN chmod g+rwx /run /var/lib/nfs /run/dbus
 #RUN sed -i 's/^init_dbus/#init_dbus/g' /start.sh
-RUN sed -i 's/^init_dbus/echo \"NFS_CORE_PARAM \{ Enable_RQUOTA = false; \}\" >> \/tmp\/ganesha\.conf/g' /start.sh
+RUN sed -i 's/^init_dbus/echo \"NFS_CORE_PARAM \{ Bind_addr = 0.0.0.0; NFS_Protocols = 4; Enable_RQUOTA = false; \}\" >> \/tmp\/ganesha\.conf/g' /start.sh
 RUN chmod a+x /start.sh
 
 CMD ["/start.sh"]
