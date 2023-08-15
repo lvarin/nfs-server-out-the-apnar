@@ -76,4 +76,4 @@ bootstrap_config
 
 echo "Starting Ganesha NFS"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib
-exec /usr/bin/ganesha.nfsd -F -f ${GANESHA_CONFIGFILE}
+exec /usr/bin/ganesha.nfsd -F -L /tmp/ganesha.log -f ${GANESHA_CONFIGFILE}
