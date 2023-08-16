@@ -17,7 +17,9 @@ RUN DEBIAN_FRONTEND=noninteractive \
  && touch /run/rpcbind/rpcbind.xdr /run/rpcbind/portmap.xdr \
  && chmod 755 /run/rpcbind/* \
  && chown messagebus:messagebus /var/run/dbus \
- && chmod -R g+rwx /run /var/lib/nfs /export
+ && chmod -R g+rwx /run /var/lib/nfs \
+ && chown 65534:65534 /export \
+ && chmod -R ug+rwx /export
 
 # Add startup script
 COPY start.sh /
