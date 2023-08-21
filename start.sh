@@ -43,8 +43,8 @@ EXPORT
                 # Exporting FSAL
                 FSAL
                 {
-                        Name = VFS;
-                        #Name = MEM;
+                        #Name = VFS;
+                        Name = MEM;
                 }
 }
 
