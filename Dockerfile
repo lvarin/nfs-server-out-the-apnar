@@ -13,7 +13,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
  && apt-get install -y netbase nfs-common dbus nfs-ganesha nfs-ganesha-vfs nfs-ganesha-mem glusterfs-common \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
- && mkdir -p /run/rpcbind /export /var/run/dbus \
+ && mkdir -p /run/rpcbind /export /var/run/dbus /etc/ganesha \
  && touch /run/rpcbind/rpcbind.xdr /run/rpcbind/portmap.xdr \
  && chmod 755 /run/rpcbind/* \
  && chown messagebus:messagebus /var/run/dbus \
