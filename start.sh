@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-: ${GANESHA_CONFIGFILE:="/tmp/ganesha.conf"}
+: ${GANESHA_CONFIGFILE:="/etc/ganesha/ganesha.conf"}
 : ${GANESHA_LOGFILE:="/tmp/ganesha.log"}
 
 function bootstrap_config {
