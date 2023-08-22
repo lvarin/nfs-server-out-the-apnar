@@ -6,7 +6,7 @@ set -e
 
 function bootstrap_config {
         echo "Bootstrapping Ganesha NFS config"
-  cat <<END >${GANESHA_CONFIGFILE}
+  cat <<END >/tmp/ganesha.conf
 NFS_CORE_PARAM
 {
                 Bind_addr = 0.0.0.0;
