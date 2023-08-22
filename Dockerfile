@@ -16,6 +16,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
  && mkdir -p /run/rpcbind /export /var/run/dbus /etc/ganesha \
  && touch /run/rpcbind/rpcbind.xdr /run/rpcbind/portmap.xdr \
  && chmod 755 /run/rpcbind/* \
+ && chmod 777 /etc/ganesha \
  && chown messagebus:messagebus /var/run/dbus \
  && chmod -R g+rwx /run /var/lib/nfs \
  && chown 65534:65534 /export \
